@@ -1,0 +1,532 @@
+/* =========================
+   USER-FRIENDLY LIGHT THEME
+   (applies to BOTH pages)
+========================= */
+:root {
+    /* Background */
+    --bg: #f5f7fb;
+    --bg2: #eef2ff;
+
+    /* Surfaces */
+    --card: #ffffff;
+    --border: rgba(15, 23, 42, .10);
+
+    /* Text */
+    --text: #0f172a;
+    /* slate-900 */
+    --muted: #475569;
+    /* slate-600 */
+
+    /* Accents */
+    --primary: #2563eb;
+    /* blue-600 */
+    --primary-soft: rgba(37, 99, 235, .12);
+
+    --success: #16a34a;
+    /* green-600 */
+    --success-soft: rgba(22, 163, 74, .12);
+
+    --danger: #dc2626;
+    /* red-600 */
+    --danger-soft: rgba(220, 38, 38, .12);
+
+    /* UI */
+    --radius: 16px;
+    --shadow: 0 10px 24px rgba(15, 23, 42, .08);
+}
+
+/* =========================
+   GLOBAL
+========================= */
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    background:
+        radial-gradient(900px 600px at 20% 10%, rgba(37, 99, 235, .10), transparent 55%),
+        radial-gradient(800px 500px at 80% 20%, rgba(22, 163, 74, .08), transparent 55%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+    color: var(--text);
+}
+
+h1 {
+    margin: 0 0 6px 0;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.muted {
+    color: var(--muted)
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: min(1100px, 92vw);
+    margin: 20px auto 60px;
+    flex: 1;
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pageHead {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, .75);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
+}
+
+.topbarInner {
+    width: min(1100px, 92vw);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.brand {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--primary), var(--success));
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(37, 99, 235, .18);
+}
+
+.brandTitle {
+    font-weight: 900
+}
+
+.brandSub {
+    font-size: 12px;
+    color: var(--muted)
+}
+
+/* =========================
+   NAV
+========================= */
+.nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.navLink {
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, .75);
+    font-weight: 800;
+    color: var(--muted);
+    transition: .15s ease;
+}
+
+.navLink:hover {
+    background: rgba(37, 99, 235, .06);
+    border-color: rgba(37, 99, 235, .25);
+    color: #1f2937;
+}
+
+.navLink.active {
+    background: var(--primary-soft);
+    border-color: rgba(37, 99, 235, .35);
+    color: #0b1b3a;
+}
+
+/* =========================
+   CARDS
+========================= */
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 14px;
+}
+
+.cardTitle {
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   KPI
+========================= */
+.kpiGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.kpi {
+    background: linear-gradient(180deg, #ffffff, rgba(37, 99, 235, .03));
+}
+
+.kpiLabel {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.kpiValue {
+    font-size: 28px;
+    font-weight: 900;
+    margin-top: 6px;
+    color: #0b1220;
+}
+
+.kpiHint {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 6px;
+}
+
+/* =========================
+   CHARTS
+========================= */
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.chartBox {
+    width: 100%;
+    height: 280px;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.legendName {
+    flex: 1;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.legendVal {
+    font-weight: 900;
+    color: #0b1220;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+/* ✅ Make all 5 fields same width + button auto */
+.gridForm {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) auto;
+    gap: 12px;
+    align-items: end;
+}
+
+.field span {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 6px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(15, 23, 42, .14);
+    background: #ffffff;
+    color: var(--text);
+    outline: none;
+    transition: .12s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: rgba(37, 99, 235, .45);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, .12);
+}
+
+input[type="number"] {
+    text-align: center;
+}
+
+/* Total box */
+.totalBox {
+    border-radius: 12px;
+    border: 1px dashed rgba(37, 99, 235, .25);
+    background: rgba(37, 99, 235, .06);
+    font-weight: 900;
+    color: #0b1b3a;
+
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+
+/* ✅ Uniform height for Record Sale + Add Product */
+.gridForm input,
+.gridForm select,
+.gridForm .totalBox,
+.gridForm .btn {
+    height: 44px;
+    display: flex;
+    align-items: center;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+    border: 1px solid rgba(15, 23, 42, .14);
+    background: rgba(255, 255, 255, .9);
+    color: #0f172a;
+    padding: 0 16px;
+    /* important for same height */
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 900;
+    transition: .15s ease;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    background: rgba(37, 99, 235, .06);
+    border-color: rgba(37, 99, 235, .25);
+}
+
+.btn.primary {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(37, 99, 235, .18);
+}
+
+.btn.primary:hover {
+    filter: brightness(0.97);
+}
+
+.btn.danger {
+    background: var(--danger-soft);
+    border-color: rgba(220, 38, 38, .30);
+    color: #7f1d1d;
+}
+
+.btn.danger:hover {
+    background: rgba(220, 38, 38, .18);
+}
+
+/* =========================
+   TABLES
+========================= */
+.tableWrap {
+    overflow: auto;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    min-width: 820px;
+}
+
+th,
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(15, 23, 42, .08);
+}
+
+th {
+    font-size: 12px;
+    color: var(--muted);
+    background: rgba(37, 99, 235, .04);
+}
+
+tr:hover td {
+    background: rgba(37, 99, 235, .04);
+}
+
+/* =========================
+   LIST (TOP 5)
+========================= */
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.listRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 14px;
+    background: rgba(37, 99, 235, .03);
+    border: 1px solid rgba(37, 99, 235, .10);
+}
+
+.rank {
+    width: 28px;
+    height: 28px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+    background: rgba(37, 99, 235, .12);
+    color: #0b1b3a;
+}
+
+.listTitle {
+    font-weight: 900
+}
+
+.listRight {
+    font-weight: 900
+}
+
+/* =========================
+   SEGMENT BUTTONS
+========================= */
+.seg {
+    display: flex;
+    gap: 8px;
+    padding: 6px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .75);
+}
+
+.segBtn {
+    border: 0;
+    background: transparent;
+    padding: 10px 12px;
+    border-radius: 999px;
+    font-weight: 900;
+    color: var(--muted);
+    cursor: pointer;
+    transition: .12s ease;
+}
+
+.segBtn:hover {
+    background: rgba(37, 99, 235, .06);
+    color: #1f2937;
+}
+
+.segBtn.active {
+    background: var(--primary-soft);
+    color: #0b1b3a;
+}
+
+/* =========================
+   DEMO TIP
+========================= */
+.hintBox {
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px dashed rgba(37, 99, 235, .25);
+    background: rgba(37, 99, 235, .06);
+    color: #0b1b3a;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    border-top: 1px solid var(--border);
+    padding: 14px 0;
+    text-align: center;
+    color: var(--muted);
+    background: rgba(255, 255, 255, .55);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 980px) {
+    .kpiGrid {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .grid2 {
+        grid-template-columns: 1fr
+    }
+
+    .gridForm {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .gridForm .btn.primary {
+        grid-column: 1 / -1
+    }
+}
+
+input:disabled {
+    background: rgba(37, 99, 235, .06);
+    border-color: rgba(37, 99, 235, .18);
+    color: #0b1b3a;
+}
