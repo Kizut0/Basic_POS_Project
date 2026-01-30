@@ -95,23 +95,22 @@ The Sales Journal is used to manage products and record sales transactions.
 
 #### Users can:
 - Add new products by entering:
-- Product name
-- Category (select existing or create new)
-- Unit price
+  - Product name
+  - Category (select existing or create new)
+  - Unit price
 - Prevent duplicate categories when creating new categories
 - Record new sales by:
-- Selecting a product
-- Entering quantity
-- Selecting transaction date
+  - Selecting a product
+  - Entering quantity
+  - Selecting transaction date
 - Automatically calculate total sale amount
 - View all sales transactions in a table
 - Delete individual sales records if needed
-- Use Seed Demo Data to quickly generate sample sales for demonstration
-- Use Clear All Data to reset products, categories, and sales records
+
 
 #### Notes:
 - Product category in a sale is auto-filled and cannot be edited manually
-- All data is stored in LocalStorage
+- All data is stored in **LocalStorage**
 - No backend server is used
 
 ![SaleJournal Screenshot](images/salejournal1.png)
