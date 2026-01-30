@@ -71,8 +71,10 @@ Basic_POS_Project/
 ```
 
 ## 🧭 Instructions of Application Functions
+
 ## 📊 Dashboard Page
 The Dashboard provides an overview of sales performance and analytics.
+
 #### Users can:
 - View total sales of all time
 - View sales summary by period (Daily / Weekly / Monthly)
@@ -111,6 +113,7 @@ The Sales Journal is used to manage products and record sales transactions.
 - Product category in a sale is auto-filled and cannot be edited manually
 - All data is stored in LocalStorage
 - No backend server is used
+
 ![SaleJournal Screenshot](images/salejournal1.png)
 ![SaleJournal Screenshot](images/salejournal2.png)
 ![SaleJournal Screenshot](images/salejournal3.png)
