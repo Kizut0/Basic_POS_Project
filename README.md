@@ -34,6 +34,7 @@ Team Members
 - LocalStorage
 
 ## 📁 Folder Structure
+```
 Basic_POS_Project/
 ├── public/
 │   └── pos_item.json          # Static product data (optional)
@@ -67,6 +68,7 @@ Basic_POS_Project/
 ├── package.json
 ├── vite.config.js
 └── README.md
+```
 
 ## Screenshot
 Dashboard screenshot
