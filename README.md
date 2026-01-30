@@ -36,38 +36,37 @@ Team Members
 ## 📁 Folder Structure
 Basic_POS_Project/
 ├── public/
-│   └── pos_item.json          # Static product data (optional runtime fetch)
+│   └── pos_item.json          # Static product data (optional)
 │
 ├── src/
 │   ├── components/            # Reusable UI components
-│   │   ├── AddProductForm.jsx # Form to add new products and categories
-│   │   ├── SalesForm.jsx      # Form to record sales transactions
-│   │   ├── SalesTable.jsx     # Table displaying sales records
-│   │   └── Charts.jsx         # Recharts components (line & pie charts)
+│   │   ├── AddProductForm.jsx # Add new products and categories
+│   │   ├── SalesForm.jsx      # Record sales transactions
+│   │   ├── SalesTable.jsx     # Sales history table
+│   │   └── Charts.jsx         # Line & Pie charts (Recharts)
 │   │
-│   ├── pages/                 # Page-level components
-│   │   ├── Dashboard.jsx      # Sales overview & analytics page
-│   │   └── Journal.jsx        # Sales Journal (products & transactions)
+│   ├── pages/                 # Application pages
+│   │   ├── Dashboard.jsx      # Sales dashboard & analytics
+│   │   └── Journal.jsx        # Sales journal page
 │   │
 │   ├── data/
-│   │   └── productItems.js    # Initial product dataset
+│   │   └── productItems.js    # Initial product data
 │   │
 │   ├── utils/
-│   │   └── storage.js         # LocalStorage helper functions
+│   │   └── storage.js         # LocalStorage helpers
 │   │
-│   ├── styles.css             # Global application styles
-│   ├── App.jsx                # Main app & routing
-│   └── main.jsx               # Application entry point
+│   ├── styles.css             # Global styles
+│   ├── App.jsx                # Routing & layout
+│   └── main.jsx               # App entry point
 │
-├── Screenshots/               # Screenshots for README
+├── Screenshots/               # README screenshots
 │   ├── Dashboard.png
-│   ├── SalesJournal.png
-│   └── Charts.png
+│   └── SalesJournal.png
 │
-├── index.html                 # HTML entry file
-├── package.json               # Project metadata & dependencies
-├── vite.config.js             # Vite configuration
-└── README.md                  # Project documentation
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
 
 ## Screenshot
 Dashboard screenshot
