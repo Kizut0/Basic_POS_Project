@@ -70,11 +70,46 @@ Basic_POS_Project/
 └── README.md
 ```
 
-## Screenshot
-Dashboard screenshot
+## 🧭 Instructions of Application Functions
+📊 Dashboard Page
+The Dashboard provides an overview of sales performance and analytics.
+
+Users can:
+	•	View total sales of all time
+	•	Select a time period (Daily / Weekly / Monthly) to view sales summaries
+	•	View sales trends displayed in a line chart
+	•	View sales distribution by category using a pie chart
+	•	See the Top 5 best-selling products
+	•	Analyze sales data visually without editing any records
+
+Notes:
+	•	All charts update automatically when new sales are recorded
+	•	Dashboard data is read-only (no data input on this page)
 ![Dashboard Screenshot](images/dashboard1.png)
 ![Dashboard Screenshot](images/dashboard2.png)
-SaleJournal Screenshot
+🧾 Sales Journal Page
+The Sales Journal is used to manage products and record sales transactions.
+
+Users can:
+	•	Add new products by entering:
+	•	Product name
+	•	Category (select existing or create new)
+	•	Unit price
+	•	Prevent duplicate categories when creating new categories
+	•	Record new sales by:
+	•	Selecting a product
+	•	Entering quantity
+	•	Selecting transaction date
+	•	Automatically calculate total sale amount
+	•	View all sales transactions in a table
+	•	Delete individual sales records if needed
+	•	Use Seed Demo Data to quickly generate sample sales for demonstration
+	•	Use Clear All Data to reset products, categories, and sales records
+
+Notes:
+	•	Product category in a sale is auto-filled and cannot be edited manually
+	•	All data is stored in LocalStorage
+	•	No backend server is used
 ![SaleJournal Screenshot](images/salejournal1.png)
 ![SaleJournal Screenshot](images/salejournal2.png)
 ![SaleJournal Screenshot](images/salejournal3.png)
