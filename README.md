@@ -116,3 +116,13 @@ The Sales Journal is used to manage products and record sales transactions.
 ![SaleJournal Screenshot](images/salejournal1.png)
 ![SaleJournal Screenshot](images/salejournal2.png)
 ![SaleJournal Screenshot](images/salejournal3.png)
+
+
+## 🛠️ Technology Stack
+- React
+- Vite
+- Recharts
+- JavaScript (ES6+)
+- LocalStorage
+
+
